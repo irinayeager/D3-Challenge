@@ -40,11 +40,11 @@ d3.csv("assets/data/data.csv").then(function (healthData) {
 
   // x-axis scale & y-axis scale
   var xLinearScale = d3.scaleLinear()
-    .domain([20, d3.max(myData, d => d.obesity + 1)])
+    .domain([20, d3.max(healthData, d => d.obesity + 1)])
     .range([0, width]);
 
   var yLinearScale = d3.scaleLinear()
-    .domain([5, d3.max(myData, d => d.poverty + 5)])
+    .domain([5, d3.max(healthData, d => d.poverty + 5)])
     .range([height, 0]);
 
   // create axis
